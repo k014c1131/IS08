@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\c#\NewBehaviourScript.cs" />
+     <Compile Include="Assets\c#\ScenarioSelectControll\publicFunction.cs" />
      <Compile Include="Assets\c#\TitleController\ScenarioCreate.cs" />
      <Compile Include="Assets\c#\TitleController\scenarioplayButton.cs" />
      <Compile Include="Assets\c#\gamenkotei.cs" />
+     <Compile Include="Assets\c#\model.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
