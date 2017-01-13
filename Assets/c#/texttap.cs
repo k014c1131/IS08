@@ -5,15 +5,12 @@ using System;
 using System.Collections;
 
 public class texttap : MonoBehaviour {
-	public int score = 100;
-	
-	public Ray ray;
-	public Ray rayItem;
-	public RaycastHit hit;
-	public GameObject selectedGameObject;
+    private int count =  0;
 
-	public GameObject text; //カメラの定義
-	public EventSystem eventsystem; //イベントシステム（いろんなことに使う）の定義
+    private string[] texts = {"1行目", "2行目", "3行目", "4行目" }; 
+
+	public GameObject text; //テキストの場所の定義　
+	public EventSystem eventsystem; //イベントシステム（いろんなことに使う）の定義　現在使用していない
 
 	// Use this for initialization
 	void Start () {
@@ -23,29 +20,11 @@ public class texttap : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		if (Input.touchCount > 0)
-		{
-			Touch touch = Input.GetTouch(0);
-			if(touch.phase == TouchPhase.Began)
-			{
-				Debug.Log("レッドスイッチを押した");
-				this.GetComponent<Text>().text = "点数 100 点";
-			}
-			else if (touch.phase == TouchPhase.Moved)
-			{
-				// タッチ移動
-			}
-			else if (touch.phase == TouchPhase.Ended)
-			{
-				// タッチ終了
-			}
-		}
-
-
 	}
 	public void OnClick() {
-		text.GetComponent<Text>().text = "点数 100 点";
+		text.GetComponent<Text>().text = text.GetComponent<Text>().text + "\n" + texts[count];
+        count++;
+        //if (count == texts.Length) { };//この部分でシーンを変更する？
 	}
 
 
