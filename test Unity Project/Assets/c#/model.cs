@@ -18,10 +18,10 @@ public class model : MonoBehaviour {
 }
 
 public class item : MonoBehaviour {
- 	private string name{ get; set; }				//アイテムの名前
- 	private string pic{ get; set; } 				//アイテムのARマーカーの画像ターゲットID
- 	private string[] introduction{ get; set; } 		//アイテムの説明文
- 	private string target_id { get; set; }
+ 	public string name{ get; set; }				//アイテムの名前
+ 	public string pic{ get; set; } 				//アイテムのARマーカーの画像ターゲットID
+ 	public string[] introduction{ get; set; } 		//アイテムの説明文
+ 	public string target_id { get; set; }
  	public item(string name,string pic,string[] introduction,string target_id){
  		this.name = name;
  		this.pic = pic;
@@ -40,12 +40,12 @@ public class item : MonoBehaviour {
 	}
 }
 public class scenarioData : MonoBehaviour {
-	private string name{ get; set; }
-	private List<item> items{ get; set; }
-	private string[] prorogs_text{ get; set; }
-	private string[] epiloge_text{ get; set; }
-	private TimeSpan limit_time{ get; set; }
-	public scenarioData(string Name,List<item> items,string[] prorogs_text,string[] epiloge_text,TimeSpan limit_time){
+	public string name{ get; set; }
+	public List<item> items{ get; set; }
+	public string[] prorogs_text{ get; set; }
+	public string[] epiloge_text{ get; set; }
+	public TimeSpan limit_time{ get; set; }
+	public scenarioData(string name,List<item> items,string[] prorogs_text,string[] epiloge_text,TimeSpan limit_time){
 		this.name = name;
 		this.items = items;
 		this.prorogs_text = prorogs_text;
