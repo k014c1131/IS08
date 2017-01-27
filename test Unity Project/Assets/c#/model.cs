@@ -22,11 +22,13 @@ public class item : MonoBehaviour {
  	public string pic{ get; set; } 				//アイテムのARマーカーの画像ターゲットID
  	public string[] introduction{ get; set; } 		//アイテムの説明文
  	public string target_id { get; set; }
+ 	public bool get_status { get; set; }
  	public item(string name,string pic,string[] introduction,string target_id){
  		this.name = name;
  		this.pic = pic;
  		this.introduction = introduction;
  		this.target_id = target_id;
+ 		this.get_status = false;
  	}	
 
 	// Use this for initialization
