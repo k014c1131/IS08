@@ -19,14 +19,16 @@ public class model : MonoBehaviour {
 
 public class item : MonoBehaviour {
  	public string name{ get; set; }				//アイテムの名前
- 	public string pic{ get; set; } 				//アイテムのARマーカーの画像ターゲットID
- 	public string[] introduction{ get; set; } 		//アイテムの説明文
- 	public string target_id { get; set; }
+ 	public string pic{ get; set; } 				//取得したアイテムの画像
+ 	public string[] introduction{ get; set; } 	//アイテムの説明文
+ 	public string target_id { get; set; }		//アイテムのARマーカーの画像ターゲットID
+ 	public bool item_get_flg {get; set;}		//アイテムを保持しているかどうかのフラグ
  	public item(string name,string pic,string[] introduction,string target_id){
  		this.name = name;
  		this.pic = pic;
  		this.introduction = introduction;
  		this.target_id = target_id;
+ 		this.item_get_flg = false;
  	}	
 
 	// Use this for initialization
