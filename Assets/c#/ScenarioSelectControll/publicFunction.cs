@@ -5,11 +5,11 @@ using model;
 using System.Collections.Generic;
 
 public class publicFunction : MonoBehaviour {
-	public static List<scenarioData> scenarios = new List<scenarioData>();
 	// Use this for initialization
 	void Start () {
 	}
 	public static List<scenarioData> getScenarios(){
+	List<scenarioData> scenarios = new List<scenarioData>();
 		//DBにデータを問い合わせる処理
 		string result = "DBにデータを問い合わせる処理";
 		//シナリオデータの数だけjを繰り返す
