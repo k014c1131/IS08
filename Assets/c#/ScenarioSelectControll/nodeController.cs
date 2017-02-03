@@ -9,14 +9,14 @@ public class nodeController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		text = transform.Find("Text").gameObject;
+		text = transform.Find("scenarioname").gameObject;
 		Debug.Log(text.GetComponent<Text>().text);
 		title = text.GetComponent<Text>().text + "";
 	}
 	public void onClick(){
 		string[] titleArrayData = title.Split(':');
 		GrovalFunction.selectScenario = int.Parse(titleArrayData[0]);
-		//Debug.Log(text.GetComponent<Text>().text);
+		Debug.Log(GrovalFunction.selectScenario);
 		SceneManager.LoadScene("prologue");
 	}
 	// Update is called once per frame
