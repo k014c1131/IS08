@@ -13,13 +13,13 @@ public class texttap : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	Debug.Log(GrovalFunction.scenarios[0].prorogs_text);
+	//Debug.Log(GrovalFunction.scenarios[0].prorogs_text);
 		if(GrovalFunction.scenariostatus == -1){
-			texts = GrovalFunction.scenarios[0].prorogs_text; 
+			texts = GrovalFunction.scenarios[GrovalFunction.selectScenario].prorogs_text; 
 			GrovalFunction.scenariostatus = 0;
 		}else 
 		if(GrovalFunction.scenariostatus == 1){
-			texts = GrovalFunction.scenarios[0].epiloge_text; 
+			texts = GrovalFunction.scenarios[GrovalFunction.selectScenario].epiloge_text; 
 
 		}
 		text.GetComponent<Text>().text = "touch screen";

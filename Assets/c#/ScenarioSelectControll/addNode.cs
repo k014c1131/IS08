@@ -15,11 +15,11 @@ public class addNode : MonoBehaviour {
        for (int i = 0; i < scenarios.Count; i++)
        {
            var item = Instantiate(prefab);
-            //item.transform.parent = GameObject.Find("Content").transform;//ここで親オブジェクトを設定する
+            //item.transform.parent = GameObject.Find("Content").transform;
 
-            item.transform.SetParent(GameObject.Find("Content").transform,false);
+            item.transform.SetParent(GameObject.Find("Content").transform,false);//ここで親オブジェクトを設定する
            var text = item.GetComponentInChildren<Text>();
-           text.text = i + scenarios[i].name;
+           text.text = i + " : " + scenarios[i].name;
        }
    }
     
