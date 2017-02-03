@@ -42,7 +42,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	}
 	static void tap(){
-		Application.LoadLevel("test3");
+		//Application.LoadLevel("test3");
 	}
 
 }
