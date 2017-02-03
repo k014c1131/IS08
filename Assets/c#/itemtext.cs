@@ -13,17 +13,20 @@ public class itemtext : MonoBehaviour {
 
     private string[] texts = { "アイテムのテキスト1", "アイテムのテキスト2", "アイテムのテキスト3", "アイテムのテキスト4", "アイテムのテキスト5", "アイテムのテキスト6" };
 
-    void Start () {
-	images = Resources.LoadAll<Sprite>("Images/");
-
-
+    void Start()
+    {
+        images = Resources.LoadAll<Sprite>("Images/");
+       
     }
 
     /* 処理の仮置き
      List<string> itemnamelist = new List<string>();
-     if(アイテムをゲットしたら){
-     itemnamelist.Add("アイテム名");//処理を行うたびにリストを空にしないと同じ項目が追加される。
-        Dropdown.GetComponent<Dropdown>().AddOptions(itemnamelist);//ここで、ドロップダウンの項目を増やす
+        if (1 == 1)
+        {
+            itemnamelist.Add("アイテム名");//処理を行うたびにリストを空にしないと同じ項目が追加される。
+            Dropdown.GetComponent<Dropdown>().ClearOptions();//ここで、ドロップダウンの項目をすべて削除する
+            Dropdown.GetComponent<Dropdown>().AddOptions(itemnamelist);//ここで、ドロップダウンの項目を増やす
+        
         }
         */
 
@@ -44,6 +47,8 @@ public class itemtext : MonoBehaviour {
         if (Dropdown.GetComponent<Dropdown>().value == 5)
         {
             //エピローグ画面に遷移
+            GrovalFunction.scenariostatus = 1;
+            Debug.Log(GrovalFunction.scenariostatus);
             SceneManager.LoadScene("prologue");
         }
     }

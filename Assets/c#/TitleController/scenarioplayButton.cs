@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 public class scenarioplayButton : MonoBehaviour {
 
 	public void onClick(){
-		SceneManager.LoadScene("scenarioSelect");
+        GrovalFunction.selectScenario = -1;
+        GrovalFunction.scenariostatus = -1;
+
+        SceneManager.LoadScene("scenarioSelect");
 		Application.LoadLevel("scenarioSelect");
 	}
 }

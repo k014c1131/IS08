@@ -11,8 +11,8 @@ public class GrovalFunction : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		scenarios = publicFunction.getScenarios();
-		selectScenario = -1;
-		scenariostatus = -1;
+		//selectScenario = -1;
+		//scenariostatus = -1;
 	
 	}
 	
