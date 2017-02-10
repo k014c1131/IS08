@@ -11,7 +11,7 @@ public class addNode : MonoBehaviour {
    // Use this for initialization
    void Start () {
 	List<scenarioData> scenarios = publicFunction.getScenarios();
-		
+	GrovalFunction.resetStatus();
        for (int i = 0; i < scenarios.Count; i++)
        {
            var item = Instantiate(prefab);

@@ -11,9 +11,10 @@ public class GrovalFunction : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		scenarios = publicFunction.getScenarios();
+	}
+	public static void resetStatus(){		
 		selectScenario = -1;
-		scenariostatus = -1;
-	
+		scenariostatus = -1;	
 	}
 	
 	// Update is called once per frame

@@ -3,16 +3,15 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using model;
 
 public class itemtext : MonoBehaviour {
 
     // Use this for initialization
     public GameObject item;
-    public GameObject Dropdown;
+    public static GameObject Dropdown;
     private Sprite[] images;
-
-    private string[] texts = { "アイテムのテキスト1", "アイテムのテキスト2", "アイテムのテキスト3", "アイテムのテキスト4", "アイテムのテキスト5", "アイテムのテキスト6" };
-
+   
     void Start () {
 	images = Resources.LoadAll<Sprite>("Images/");
 
@@ -26,6 +25,26 @@ public class itemtext : MonoBehaviour {
         Dropdown.GetComponent<Dropdown>().AddOptions(itemnamelist);//ここで、ドロップダウンの項目を増やす
         }
         */
+    public scenarioData selectScenario;
+    private static string[] texts; 
+    //= { "アイテムのテキスト1", "アイテムのテキスト2", "アイテムのテキスト3", "アイテムのテキスト4", "アイテムのテキスト5", "アイテムのテキスト6" };
+    public static List<string> itemnamelist = new List<string>();
+    void Start()
+    {
+        images = Resources.LoadAll<Sprite>("Images/");
+        selectScenario = GrovalFunction.scenarios[GrovalFunction.selectScenario];
+        for(int i = 0;i < selectScenario.items.Count;i++){
+            texts[i] = selectScenario.items[i].name;
+        }
+    }
+    public static void item_add_pulldown(int item_num){
+        
+            itemnamelist.Add(texts[item_num]);//処理を行うたびにリストを空にしないと同じ項目が追加される。
+            Dropdown.GetComponent<Dropdown>().ClearOptions();//ここで、ドロップダウンの項目をすべて削除する
+            Dropdown.GetComponent<Dropdown>().AddOptions(itemnamelist);//ここで、ドロップダウンの項目を増やす
+        
+        
+    }
 
     public void OnValueChanged(int result)
     {
